@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Event Registration</title>
+</head>
+<body>
+    <div class="form">
+        <h1>Event Registration</h1>
+        <form>
+            <label for="employee_code">Employee Code.</label>
+            <input type="url" id="employee_code" name="employee code" placeholder="E90278" required />
+            <label for="employee_name">Employee Name</label>
+            <input type="url" id="employee_name" name="employee name" placeholder="Juan P. Balagtas" required />
+            <label for="department">Department</label>
+            <select name="department" id="department">
+                <option value="Finance">Finance</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Production">Production</option>
+                <option value="Logistics">Logistics</option>
+                <option value="Procurement">Procurement</option>
+                <option value="Planning">Planning</option>
+              </select>
+            <button type="button" onclick="generateQRCode()">
+            Generate QR Code
+          </button>
+        </form>
+      
+        <div id="qrcode-container">
+          <canvas id="qrcode" class="qrcode"></canvas>
+        </div>
+      
+        <script type="text/javascript">
+          function generateQRCode() {
+            let employee_code = document.getElementById("employee_code").value;
+            let employee_name = document.getElementById("employee_name").value;
+            let department = document.getElementById("department").value;
+            let text = `${employee_code}\n${employee_name}\n${department}`
+            if (employee_code && employee_name ) {
+              let qrcodeContainer = document.getElementById("qrcode");
+              qrcodeContainer.innerHTML = "";
+              new QRious({
+                element: qrcodeContainer,
+                value: text,
+                size: 350
+              });
+      
+              document.getElementById("qrcode-container").style.display = "block";
+            } else {
+              alert("Please enter a valid URL");
+            }
+          }
+        </script>
+      </div>
+</body>
+</html>
+
+
+
