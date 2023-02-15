@@ -30,6 +30,16 @@
     padding: 3%;
     border: 1px solid #5868bf;
   }
+
+  #department {
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+  }
   
   .form button {
     box-sizing: border-box;
