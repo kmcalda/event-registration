@@ -13,9 +13,9 @@
         <h1>Event Registration</h1>
         <form>
             <label for="employee_code">Employee Code.</label>
-            <input type="url" id="employee_code" name="employee code" placeholder="E90278" required />
+            <input type="text" id="employee_code" name="employee code" placeholder="E90278" required />
             <label for="employee_name">Employee Name</label>
-            <input type="url" id="employee_name" name="employee name" placeholder="Juan P. Balagtas" required />
+            <input type="text" id="employee_name" name="employee name" placeholder="Juan P. Balagtas" required />
             <label for="department">Department</label>
             <select name="department" id="department">
                 <option value="Finance">Finance</option>
@@ -47,12 +47,12 @@
               new QRious({
                 element: qrcodeContainer,
                 value: text,
-                size: 350
+                size: 340
               });
       
               document.getElementById("qrcode-container").style.display = "block";
             } else {
-              alert("Please enter a valid URL");
+              alert("Please fill all fields");
             }
           }
         </script>
