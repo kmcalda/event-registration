@@ -61,7 +61,7 @@
     background: rgba(88,104,191, 0.5);
   }
   #qrcode-container{
-      display:none;
+      display:block;
   }
   
   .qrcode{
