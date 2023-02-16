@@ -60,9 +60,9 @@
   .form button:hover {
     background: rgba(88,104,191, 0.5);
   }
-  #qrcode-container{
+/*   #qrcode-container{
       display:none;
-  }
+  } */
   
   .qrcode img{
     margin: 0 auto;
@@ -80,5 +80,10 @@
     }
   }
 
-  
+  #qrcode-container{
+    max-height: 0;
+    transition: max-height 2s;
+    overflow: hidden;
+}
+
 
