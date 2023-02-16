@@ -42,6 +42,7 @@
   }
   
   .form button {
+    display: block;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -64,8 +65,16 @@
   }
   
   .qrcode{
-    padding: 12px;
+    margin-top: 30px;
   }
   .qrcode img{
     margin: 0 auto;
   }
+  @media screen and (min-width: 450px ) {
+    .qrcode {
+      padding: 40px;
+    }
+  }
+
+  
+
