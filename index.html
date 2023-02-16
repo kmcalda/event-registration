@@ -73,7 +73,8 @@
                 size: 330
               });
       
-              document.getElementById("qrcode-container").style.display = "block";
+//               document.getElementById("qrcode-container").style.display = "block";
+                document.getElementById("qrcode-container").style.cssText += 'max-height: 500px';
             } else {
               alert("Please fill all fields");
             }
