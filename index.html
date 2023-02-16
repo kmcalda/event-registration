@@ -12,13 +12,13 @@
     <div class="form">
         <h1>Event QR Code Generator</h1>
         <form>
-            <label for="employee_code">Employee Code.</label>
-            <input type="text" id="employee_code" name="employee code" placeholder="E90278" required />
+            <label for="employee_number">Employee Number.</label>
+            <input type="text" id="employee_number" name="employee number" placeholder="E90278" required />
             <label for="employee_name">Employee Name</label>
             <input type="text" id="employee_name" name="employee name" placeholder="Juan P. Balagtas" required />
             <label for="department">Department</label>
             <select name="department" id="department">
-                <option value="DOMESTIC DISTRIBUTION BUSINESS UNIT">DOMESTIC DISTRIBUTION BUSINESS UNIT</option>
+                <option value="DOMESTIC SALES">DOMESTIC SALES</option>
                 <option value="EMS">EMS</option>
                 <option value="ENGINEERING & FACILITIES">ENGINEERING & FACILITIES</option>
                 <option value="ENTERPRISE PROCESS EXCELLENCE">ENTERPRISE PROCESS EXCELLENCE</option>
@@ -60,11 +60,11 @@
       
         <script type="text/javascript">
           function generateQRCode() {
-            let employee_code = document.getElementById("employee_code").value;
+            let employee_number = document.getElementById("employee_number").value;
             let employee_name = document.getElementById("employee_name").value;
             let department = document.getElementById("department").value;
-            let text = `${employee_code}\n${employee_name}\n${department}`
-            if (employee_code && employee_name ) {
+            let text = `${employee_number}\n${employee_name}\n${department}`
+            if (employee_number && employee_name ) {
               let qrcodeContainer = document.getElementById("qrcode");
               qrcodeContainer.innerHTML = "";
               new QRious({
