@@ -73,6 +73,7 @@
   }
   @media screen and (min-width: 450px ) {
     .qrcode {
+      margin-left: 0;
       padding: 40px;
     }
   }
