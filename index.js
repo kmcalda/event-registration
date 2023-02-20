@@ -10,7 +10,7 @@ document.getElementById("button").addEventListener("click", () => {
         const qrCode = new QRCodeStyling({
             type: "svg",
             data: data,
-            image: "img/pioneerlogo.png",
+            image: "pioneerlogo.png",
             dotsOptions: {
                 type: "rounded"
             },
